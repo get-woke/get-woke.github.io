@@ -1,37 +1,100 @@
-## Welcome to GitHub Pages
+# woke
 
-You can use the [editor on GitHub](https://github.com/get-woke/get-woke.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+_I stay woke - Erykah Badu_
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+`woke` is a text file analysis tool that detects non-inclusive language in your source code.
 
-### Markdown
+![woke.gif](https://raw.githubusercontent.com/caitlinelfring/woke/main/img/woke.gif)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## About
 
-```markdown
-Syntax highlighted code block
+Creating an inclusive work environment is imperitive to a healthy, supportive, and
+productive culture, and an environment where everyone feels welcome and included.
 
-# Header 1
-## Header 2
-### Header 3
+`woke`'s purpose is to point out places where improvements can be made by removing
+ non-inclusive language and replacing it with more inclusive alternatives.
 
-- Bulleted
-- List
+Companies like [GitHub](https://github.com/github/renaming), [Twitter](https://twitter.com/TwitterEng/status/1278733303508418560), and [Apple](https://developer.apple.com/news/?id=1o9zxsxl) are already pushing these changes.
 
-1. Numbered
-2. List
+## Installation
 
-**Bold** and _Italic_ and `Code` text
+### Simple installation
 
-[Link](url) and ![Image](src)
+```bash
+curl -sSfL https://raw.githubusercontent.com/caitlinelfring/woke/main/install.sh | bash -s -- -b /usr/local/bin
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Feel free to change the path from `/usr/local/bin`, just make sure `woke`
+is available on your `$PATH` (check with `woke --version`).
 
-### Jekyll Themes
+### Build from source
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/get-woke/get-woke.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Install the go toolchain: <https://golang.org/doc/install>
 
-### Support or Contact
+```bash
+go get -u github.com/caitlinelfring/woke
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+`woke` will be installed to `$GOPATH/bin/woke`.
+
+### Releases
+
+Download the latest binary from [Releases](https://github.com/caitlinelfring/woke/releases/latest)
+
+### Docker
+
+You can run `woke` within docker. You will need to mount a volume that contains your source code and/or rules.
+
+```bash
+## Run with all defaults, within the mounted /src directory
+docker run -v $(pwd):/src -w /src celfring/woke
+
+## Provide rules config
+docker run -v $(pwd):/src -w /src celfring/woke \
+  woke -c my-rules.yaml
+```
+
+## Usage
+
+```text
+$ woke --help
+
+woke is a linter that will check your source code for usage of non-inclusive
+language and provide suggestions for alternatives. Rules can be customized
+to suit your needs.
+
+Provide a list file globs for files you'd like to check.
+
+Usage:
+  woke [globs ...] [flags]
+
+Flags:
+  -c, --config string       YAML file with list of rules
+      --debug               Enable debug logging
+      --exit-1-on-failure   Exit with exit code 1 on failures
+  -h, --help                help for woke
+  -o, --output string       Output type [text,simple] (default "text")
+      --stdin               Read from stdin
+  -v, --version             version for woke
+```
+
+## Tools
+
+- [GitHub Action](https://github.com/marketplace/actions/run-woke)
+- [GitHub Action (reviewdog)](https://github.com/marketplace/actions/run-woke-with-reviewdog)
+
+## Resources
+
+* <https://buffer.com/resources/inclusive-language-tech/>
+* <https://medium.com/pm101/inclusive-language-guide-for-tech-companies-and-startups-f5b254d4a5b7>
+* <https://www.marketplace.org/2020/06/17/tech-companies-update-language-to-avoid-offensive-terms/>
+* <https://tools.ietf.org/html/draft-knodel-terminology-02>
+
+## More Info
+
+Learn more about `woke` at https://github.com/caitlinelfring/woke
+
+### License
+
+This application is licensed under the MIT License, you may obtain a copy of it
+[here](https://github.com/caitlinelfring/woke/blob/main/LICENSE).
