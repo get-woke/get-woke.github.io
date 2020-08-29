@@ -1,8 +1,4 @@
-# woke
-
 _I stay woke - Erykah Badu_
-
-`woke` is a text file analysis tool that detects non-inclusive language in your source code.
 
 ![woke.gif](https://raw.githubusercontent.com/caitlinelfring/woke/main/img/woke.gif)
 
@@ -18,41 +14,17 @@ Companies like [GitHub](https://github.com/github/renaming), [Twitter](https://t
 
 ## Installation
 
-### Simple installation
+Install the latest version of `woke`
 
 ```bash
-curl -sSfL https://raw.githubusercontent.com/caitlinelfring/woke/main/install.sh | bash -s -- -b /usr/local/bin
+curl -sSfL https://raw.githubusercontent.com/caitlinelfring/woke/main/install.sh | \
+  bash -s -- -b /usr/local/bin
 ```
 
 Feel free to change the path from `/usr/local/bin`, just make sure `woke`
 is available on your `$PATH` (check with `woke --version`).
 
-### Build from source
-
-Install the go toolchain: <https://golang.org/doc/install>
-
-```bash
-go get -u github.com/caitlinelfring/woke
-```
-
-`woke` will be installed to `$GOPATH/bin/woke`.
-
-### Releases
-
-Download the latest binary from [Releases](https://github.com/caitlinelfring/woke/releases/latest)
-
-### Docker
-
-You can run `woke` within docker. You will need to mount a volume that contains your source code and/or rules.
-
-```bash
-## Run with all defaults, within the mounted /src directory
-docker run -v $(pwd):/src -w /src celfring/woke
-
-## Provide rules config
-docker run -v $(pwd):/src -w /src celfring/woke \
-  woke -c my-rules.yaml
-```
+For more installation options, see <https://github.com/caitlinelfring/woke#installation>
 
 ## Usage
 
@@ -92,7 +64,7 @@ Flags:
 
 ## More Info
 
-Learn more about `woke` at https://github.com/caitlinelfring/woke
+Learn more about `woke` at <https://github.com/caitlinelfring/woke>
 
 ### License
 

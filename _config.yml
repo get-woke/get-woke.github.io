@@ -1,1 +1,9 @@
 theme: jekyll-theme-midnight
+title: woke
+description: A text file analysis tool that detects non-inclusive language in your source code.
+
+show_downloads: true
+github:
+  repository_url: https://github.com/caitlinelfring/woke
+  zip_url: https://github.com/caitlinelfring/woke/releases/latest
+  tar_url: https://github.com/caitlinelfring/woke/releases/latest
