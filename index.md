@@ -17,7 +17,7 @@ Companies like [GitHub](https://github.com/github/renaming), [Twitter](https://t
 Install the latest version of `woke`
 
 ```bash
-curl -sSfL https://raw.githubusercontent.com/caitlinelfring/woke/main/install.sh | \
+curl -sSfL https://git.io/get-woke | \
   bash -s -- -b /usr/local/bin
 ```
 
