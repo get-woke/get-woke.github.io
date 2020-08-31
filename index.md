@@ -26,30 +26,6 @@ is available on your `$PATH` (check with `woke --version`).
 
 For more installation options, see <https://github.com/get-woke/woke#installation>
 
-## Usage
-
-```text
-$ woke --help
-
-woke is a linter that will check your source code for usage of non-inclusive
-language and provide suggestions for alternatives. Rules can be customized
-to suit your needs.
-
-Provide a list file globs for files you'd like to check.
-
-Usage:
-  woke [globs ...] [flags]
-
-Flags:
-  -c, --config string       YAML file with list of rules
-      --debug               Enable debug logging
-      --exit-1-on-failure   Exit with exit code 1 on failures
-  -h, --help                help for woke
-  -o, --output string       Output type [text,simple] (default "text")
-      --stdin               Read from stdin
-  -v, --version             version for woke
-```
-
 ## Tools
 
 - [GitHub Action](https://github.com/marketplace/actions/run-woke)
