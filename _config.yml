@@ -4,6 +4,6 @@ description: A text file analysis tool that detects non-inclusive language in yo
 
 show_downloads: true
 github:
-  repository_url: https://github.com/caitlinelfring/woke
-  zip_url: https://github.com/caitlinelfring/woke/releases/latest
-  tar_url: https://github.com/caitlinelfring/woke/releases/latest
+  repository_url: https://github.com/get-woke/woke
+  zip_url: https://github.com/get-woke/woke/releases/latest
+  tar_url: https://github.com/get-woke/woke/releases/latest

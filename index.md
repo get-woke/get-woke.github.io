@@ -1,6 +1,6 @@
 _I stay woke - Erykah Badu_
 
-![woke.gif](https://raw.githubusercontent.com/caitlinelfring/woke/main/img/woke.gif)
+![woke.gif](https://raw.githubusercontent.com/get-woke/woke/main/img/woke.gif)
 
 ## About
 
@@ -17,14 +17,14 @@ Companies like [GitHub](https://github.com/github/renaming), [Twitter](https://t
 Install the latest version of `woke`
 
 ```bash
-curl -sSfL https://git.io/get-woke | \
+curl -sSfL https://raw.githubusercontent.com/get-woke/woke/main/install.sh | \
   bash -s -- -b /usr/local/bin
 ```
 
 Feel free to change the path from `/usr/local/bin`, just make sure `woke`
 is available on your `$PATH` (check with `woke --version`).
 
-For more installation options, see <https://github.com/caitlinelfring/woke#installation>
+For more installation options, see <https://github.com/get-woke/woke#installation>
 
 ## Usage
 
@@ -64,9 +64,9 @@ Flags:
 
 ## More Info
 
-Learn more about `woke` at <https://github.com/caitlinelfring/woke>
+Learn more about `woke` at <https://github.com/get-woke/woke>
 
 ### License
 
 This application is licensed under the MIT License, you may obtain a copy of it
-[here](https://github.com/caitlinelfring/woke/blob/main/LICENSE).
+[here](https://github.com/get-woke/woke/blob/main/LICENSE).
