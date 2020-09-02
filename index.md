@@ -1,6 +1,6 @@
 _I stay woke - Erykah Badu_
 
-![woke.gif](https://raw.githubusercontent.com/get-woke/woke/main/img/woke.gif)
+![woke.gif](img/woke.gif)
 
 ## About
 
