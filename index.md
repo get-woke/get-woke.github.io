@@ -16,6 +16,17 @@ Companies like [GitHub](https://github.com/github/renaming), [Twitter](https://t
 
 Install the latest version of `woke`
 
+### macOS
+
+You can install a binary release on macOS using [brew](https://brew.sh)
+
+```bash
+brew install get-woke/tap/woke
+brew upgrade get-woke/tap/woke
+```
+
+### Linux or Windows
+
 ```bash
 curl -sSfL https://raw.githubusercontent.com/get-woke/woke/main/install.sh | \
   bash -s -- -b /usr/local/bin
@@ -28,8 +39,8 @@ For more installation options, see <https://github.com/get-woke/woke#installatio
 
 ## Tools
 
-- [GitHub Action](https://github.com/marketplace/actions/run-woke)
-- [GitHub Action (reviewdog)](https://github.com/marketplace/actions/run-woke-with-reviewdog)
+* [GitHub Action](https://github.com/marketplace/actions/run-woke)
+* [GitHub Action (reviewdog)](https://github.com/marketplace/actions/run-woke-with-reviewdog)
 
 ## Resources
 
