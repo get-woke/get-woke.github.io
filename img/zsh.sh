@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+DISABLE_AUTO_UPDATE="true"
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="$GOPATH/bin:$PATH"
